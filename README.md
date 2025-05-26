@@ -10,7 +10,7 @@ Unlike tools like Riffusion or Suno that AI generate full songs, KeygenR is buil
 Type your musical ideas or speak them using the Web Speech API (best in Chrome).
 
 🤖 AI-Powered Generation
-Uses OpenAI’s GPT-4o to turn natural language into structured musical data—chords, melodies, rhythms.
+Uses OpenAI’s GPT-4o to turn prompts into structured musical data—chords, melodies, rhythms.
 
 🎼 Instant .mid Downloads
 Creates DAW-compatible MIDI files using midi-writer-js. Download or drag and drop directly into your project.
