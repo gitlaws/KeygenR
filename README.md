@@ -1,27 +1,17 @@
-# Keygenr
+🎹 MIDI Generator – KeygenR
+KeygenR is a lightweight, browser-based Angular app that uses AI to convert typed or spoken prompts into downloadable MIDI files for any DAW (e.g., Ableton, FL Studio, Logic Pro).
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.4.
+Unlike tools like Riffusion or Suno that generate full songs, KeygenR is built for producers who want quick, AI-powered MIDI—custom chords, melodies, or rhythms they can shape into their own music. Whether you're sketching an idea or laying down a full track, just describe what you want—“16 bars of Drake-style piano at 90 BPM” or “Neo-soul chords in the style of H.E.R.”—and get tailored MIDI patterns in seconds. Generate as many bars as you need, in any artist’s style or genre.
 
-## Development server
+✨ Features
+🎤 Text & Voice Input
+Type your musical ideas or speak them using the Web Speech API (best in Chrome).
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+🤖 AI-Powered Generation
+Uses OpenAI’s GPT-4o to turn natural language into structured musical data—chords, melodies, rhythms.
 
-## Code scaffolding
+🎼 Instant .mid Downloads
+Creates DAW-compatible MIDI files using midi-writer-js. Download or drag and drop directly into your project.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+🎧 Genre + Artist Flexibility
+Works with any genre or artist reference—hip hop, EDM, jazz, neo-soul, orchestral, trap, and beyond.
