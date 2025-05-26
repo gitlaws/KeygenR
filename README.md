@@ -21,3 +21,5 @@ Creates DAW-compatible MIDI files using midi-writer-js. Download or drag and dro
 🎧 Genre + Artist Flexibility
 
 Works with any genre or artist reference—hip hop, EDM, jazz, neo-soul, orchestral, trap, and beyond.
+
+Made with ❤️ by me.
