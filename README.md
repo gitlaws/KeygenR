@@ -12,7 +12,7 @@ Type your musical ideas or speak them using the Web Speech API (best in Chrome).
 
 🤖 AI-Powered Generation
 
-Uses OpenAI’s GPT-4o to turn prompts into structured musical data—chords, melodies, rhythms.
+Uses AI services to turn prompts into structured musical data—chords, melodies, rhythms.
 
 🎼 Instant .mid Downloads
 
