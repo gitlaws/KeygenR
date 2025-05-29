@@ -1,0 +1,13 @@
+// Ableton-inspired color palette
+$dark-bg: #232323;
+$panel-bg: linear-gradient(120deg, #232323 80%, #2d2d2d 100%);
+$accent-amber: #ffc300;
+$accent-teal: #00e6d8;
+$accent-pink: #ff4081;
+$text-main: #e0e0e0;
+$text-muted: #b0b0b0;
+$border-slim: 1.5px solid #353535;
+$focus-ring: 0 0 0 2px $accent-amber;
+
+// Typography
+$font-main: "Inter", "Roboto", "Segoe UI", Arial, sans-serif;

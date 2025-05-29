@@ -1,45 +1,47 @@
-<div class="prompt-container">
-  <textarea
-    [(ngModel)]="userPrompt"
-    placeholder="e.g., 16 bars of Drake-style piano, 90 BPM"
-    class="prompt-input"
-  ></textarea>
-  <div class="controls">
-    <label for="bpm-select">BPM</label>
-    <select
-      id="bpm-select"
-      [(ngModel)]="bpm"
-      class="bpm-select"
-      title="Select BPM"
-    >
-      <option *ngFor="let bpm of bpmOptions" [value]="bpm">
-        {{ bpm }} BPM
-      </option>
-    </select>
-    <label for="key-select">Key</label>
-    <select
-      id="key-select"
-      [(ngModel)]="key"
-      class="key-select"
-      title="Select Key"
-    >
-      <option *ngFor="let key of keyOptions" [value]="key">{{ key }}</option>
-    </select>
-    <button
-      type="button"
-      (click)="toggleSpeech()"
-      [disabled]="isListening"
-      class="speech-btn"
-    >
-      {{ isListening ? "Listening..." : "Speak Prompt" }}
-    </button>
-    <button
-      type="button"
-      (click)="generateMidi()"
-      [disabled]="!userPrompt || isGenerating"
-      class="generate-btn"
-    >
-      {{ isGenerating ? "Generating..." : "Generate MIDI" }}
-    </button>
+<div class="prompt-center-viewport">
+  <div class="prompt-container">
+    <textarea
+      [(ngModel)]="userPrompt"
+      placeholder="e.g., 16 bars of Drake-style piano, 90 BPM"
+      class="prompt-input"
+    ></textarea>
+    <div class="controls">
+      <label for="bpm-select">BPM</label>
+      <select
+        id="bpm-select"
+        [(ngModel)]="bpm"
+        class="bpm-select"
+        title="Select BPM"
+      >
+        <option *ngFor="let bpm of bpmOptions" [value]="bpm">
+          {{ bpm }} BPM
+        </option>
+      </select>
+      <label for="key-select">Key</label>
+      <select
+        id="key-select"
+        [(ngModel)]="key"
+        class="key-select"
+        title="Select Key"
+      >
+        <option *ngFor="let key of keyOptions" [value]="key">{{ key }}</option>
+      </select>
+      <button
+        type="button"
+        (click)="toggleSpeech()"
+        [disabled]="isListening"
+        class="speech-btn"
+      >
+        {{ isListening ? "Listening..." : "Speak Prompt" }}
+      </button>
+      <button
+        type="button"
+        (click)="generateMidi()"
+        [disabled]="!userPrompt || isGenerating"
+        class="generate-btn"
+      >
+        {{ isGenerating ? "Generating..." : "Generate MIDI" }}
+      </button>
+    </div>
   </div>
 </div>

@@ -1,5 +1,11 @@
+@import "../styles/colors.scss";
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
 .main {
   min-height: 100vh;
-  background: linear-gradient(135deg, #181823 0%, #23243a 100%);
-    padding: 2rem 0;
+  background: $dark-bg;
+  background: $panel-bg;
+  font-family: $font-main;
+  color: $text-main;
 }

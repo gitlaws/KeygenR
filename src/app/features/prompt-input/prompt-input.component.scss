@@ -23,6 +23,16 @@
   }
 }
 
+// Add to prompt-input.component.scss or a global style file
+
+.prompt-center-viewport {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none; // or transparent, so your main background shows through
+}
+
 .glass-panel,
 .prompt-container {
   display: flex;
