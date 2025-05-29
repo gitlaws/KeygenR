@@ -4,12 +4,8 @@ import { Component } from '@angular/core';
   selector: 'app-prompt-input',
   standalone: true,
   imports: [],
-  template: `
-    <p>
-      prompt-input works!
-    </p>
-  `,
-  styles: ``
+  templateUrl: './prompt-input.component.html',
+  styleUrl: './prompt-input.component.scss'
 })
 export class PromptInputComponent {
 
