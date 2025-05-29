@@ -5,15 +5,28 @@
     class="prompt-input"
   ></textarea>
   <div class="controls">
-    <select [(ngModel)]="bpm" class="bpm-select">
+    <label for="bpm-select">BPM</label>
+    <select
+      id="bpm-select"
+      [(ngModel)]="bpm"
+      class="bpm-select"
+      title="Select BPM"
+    >
       <option *ngFor="let bpm of bpmOptions" [value]="bpm">
         {{ bpm }} BPM
       </option>
     </select>
-    <select [(ngModel)]="key" class="key-select">
+    <label for="key-select">Key</label>
+    <select
+      id="key-select"
+      [(ngModel)]="key"
+      class="key-select"
+      title="Select Key"
+    >
       <option *ngFor="let key of keyOptions" [value]="key">{{ key }}</option>
     </select>
     <button
+      type="button"
       (click)="toggleSpeech()"
       [disabled]="isListening"
       class="speech-btn"
@@ -21,6 +34,7 @@
       {{ isListening ? "Listening..." : "Speak Prompt" }}
     </button>
     <button
+      type="button"
       (click)="generateMidi()"
       [disabled]="!userPrompt || isGenerating"
       class="generate-btn"
@@ -28,11 +42,4 @@
       {{ isGenerating ? "Generating..." : "Generate MIDI" }}
     </button>
   </div>
-  <a
-    *ngIf="midiUri"
-    [href]="midiUri"
-    download="generated-midi.mid"
-    class="download-btn"
-    >Download MIDI</a
-  >
 </div>
