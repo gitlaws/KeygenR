@@ -2,14 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: #1976d2;
-  color: #fff;
+  background: linear-gradient(90deg, #232323 80%, #353535 100%);
+  color: #ffc300;
   padding: 0.5rem 1rem;
+  border-bottom: 1.5px solid #353535;
+  box-shadow: 0 2px 12px 0 rgba(255, 195, 0, 0.07);
 }
+
 .toolbar-logo {
   font-weight: bold;
   font-size: 1.2rem;
+  color: #ffc300;
+  letter-spacing: 0.03em;
 }
+
 .toolbar-links {
   list-style: none;
   display: flex;
@@ -17,18 +23,37 @@
   margin: 0;
   padding: 0;
 }
+
 .toolbar-links li a {
-  color: #fff;
+  color: #e0e0e0;
   text-decoration: none;
+  font-weight: 500;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  transition: background 0.2s, color 0.2s;
+
+  &:hover,
+  &:focus-visible {
+    background: #353535;
+    color: #ffc300;
+    outline: none;
+  }
 }
+
 .toolbar-menu {
   display: none;
   background: none;
   border: none;
-  color: #fff;
+  color: #ffc300;
   font-size: 2rem;
   cursor: pointer;
+
+  &:focus-visible {
+    outline: 2px solid #ffc300;
+    outline-offset: 2px;
+  }
 }
+
 @media (max-width: 600px) {
   .toolbar-links {
     display: none;
