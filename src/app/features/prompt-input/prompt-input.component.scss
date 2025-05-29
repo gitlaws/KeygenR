@@ -1,55 +1,82 @@
+.glass-panel,
 .prompt-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #1a1a1a;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
-    font-family: 'Roboto', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(30, 30, 40, 0.35); // glassmorphism background
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.25),
+    0 0 10px rgba(255, 64, 129, 0.15);
+  border-radius: 18px;
+  padding: 30px;
+  font-family: "Roboto", sans-serif;
+  transition: box-shadow 0.3s, background 0.3s;
+
+  @media (max-width: 700px) {
+    padding: 1rem;
+    border-radius: 12px;
   }
-  
-  .prompt-input {
-    width: 600px;
-    height: 120px;
-    background: #2a2a2a;
-    color: #fff;
-    border: 2px solid #ff4081;
+  @media (max-width: 500px) {
+    padding: 0.5rem;
     border-radius: 8px;
-    padding: 10px;
-    resize: none;
-    font-size: 16px;
   }
-  
-  .controls {
-    display: flex;
-    gap: 15px;
-    margin: 15px 0;
+}
+
+.prompt-input {
+  width: 600px;
+  height: 120px;
+  background: #2a2a2a;
+  color: #fff;
+  border: 2px solid #ff4081;
+  border-radius: 8px;
+  padding: 10px;
+  resize: none;
+  font-size: 16px;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    min-width: 0;
   }
-  
-  .bpm-select, .key-select {
-    background: #333;
-    color: #fff;
-    border: 1px solid #ff4081;
-    padding: 8px;
-    border-radius: 5px;
-  }
-  
-  .speech-btn, .generate-btn, .download-btn {
-    background: #ff4081;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .speech-btn:hover, .generate-btn:hover, .download-btn:hover {
-    background: #e91e63;
-  }
-  
-  .speech-btn:disabled, .generate-btn:disabled {
-    background: #666;
-    cursor: not-allowed;
-  }
+}
+
+.controls {
+  display: flex;
+  gap: 15px;
+  margin: 15px 0;
+  flex-wrap: wrap;
+}
+
+.bpm-select,
+.key-select {
+  background: #333;
+  color: #fff;
+  border: 1px solid #ff4081;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.speech-btn,
+.generate-btn,
+.download-btn {
+  background: #ff4081;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.speech-btn:hover,
+.generate-btn:hover,
+.download-btn:hover {
+  background: #e91e63;
+}
+
+.speech-btn:disabled,
+.generate-btn:disabled {
+  background: #666;
+  cursor: not-allowed;
+}
