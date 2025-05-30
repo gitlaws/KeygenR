@@ -7,13 +7,13 @@
   background: none;
 }
 
-// Main prompt panel with Ableton-inspired glassmorphism (teal & blue harmony)
+// Main prompt panel with Ableton-inspired glassmorphism (amber & charcoal harmony)
 .prompt-container {
-  background: rgba(32, 38, 50, 0.82);
-  backdrop-filter: blur(16px) saturate(160%);
-  -webkit-backdrop-filter: blur(16px) saturate(160%);
-  border: 1.5px solid rgba(0, 230, 216, 0.13);
-  box-shadow: 0 4px 24px 0 rgba(0, 230, 216, 0.1),
+  background: rgba(48, 40, 32, 0.88); // warm charcoal glass
+  backdrop-filter: blur(14px) saturate(130%);
+  -webkit-backdrop-filter: blur(14px) saturate(130%);
+  border: 1.5px solid rgba(255, 195, 0, 0.13); // subtle amber border
+  box-shadow: 0 4px 24px 0 rgba(255, 195, 0, 0.1),
     0 2px 16px 0 rgba(0, 0, 0, 0.18);
   border-radius: 16px;
   display: flex;
@@ -41,9 +41,9 @@
   width: 100%;
   max-width: 600px;
   height: 110px;
-  background: #232a34;
-  color: #e0f7fa;
-  border: 1.5px solid #00e6d8;
+  background: #2d2623; // deep brownish charcoal
+  color: #ffe082; // soft amber
+  border: 1.5px solid #ffc300;
   border-radius: 8px;
   padding: 12px;
   font-size: 1.08rem;
@@ -52,9 +52,9 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 
   &:focus-visible {
-    border-color: #00e6d8;
+    border-color: #ffc300;
     outline: none;
-    box-shadow: 0 0 0 2px #00e6d8;
+    box-shadow: 0 0 0 2px #ffc300;
   }
 
   @media (max-width: 700px) {
@@ -89,9 +89,9 @@
 // Select elements
 .bpm-select,
 .key-select {
-  background: #232a34;
-  color: #e0f7fa;
-  border: 1.5px solid #00e6d8;
+  background: #2d2623;
+  color: #ffe082;
+  border: 1.5px solid #ffc300;
   padding: 8px 14px;
   border-radius: 5px;
   font-size: 1rem;
@@ -99,9 +99,9 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 
   &:focus-visible {
-    border-color: #40a0ff;
+    border-color: #ff4081;
     outline: none;
-    box-shadow: 0 0 0 2px #40a0ff;
+    box-shadow: 0 0 0 2px #ff4081;
   }
 }
 
@@ -109,8 +109,8 @@
 .speech-btn,
 .generate-btn,
 .download-btn {
-  background: linear-gradient(90deg, #00e6d8 60%, #40a0ff 100%);
-  color: #181823;
+  background: linear-gradient(90deg, #ffc300 60%, #ff4081 100%);
+  color: #232323;
   border: none;
   padding: 10px 26px;
   border-radius: 6px;
@@ -118,24 +118,24 @@
   font-size: 1.08rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  box-shadow: 0 2px 12px 0 rgba(0, 230, 216, 0.13);
+  box-shadow: 0 2px 12px 0 rgba(255, 195, 0, 0.13);
   transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
 
   &:hover,
   &:focus-visible {
-    background: linear-gradient(90deg, #40a0ff 60%, #00e6d8 100%);
-    box-shadow: 0 0 0 3px #00e6d8;
-    color: #181823;
+    background: linear-gradient(90deg, #ff4081 60%, #ffc300 100%);
+    box-shadow: 0 0 0 3px #ffc300;
+    color: #232323;
   }
 
   &:focus-visible {
-    outline: 2px solid #00e6d8;
+    outline: 2px solid #ffc300;
     outline-offset: 2px;
   }
 
   &:active {
     transform: scale(0.97);
-    box-shadow: 0 0 0 4px #40a0ff;
+    box-shadow: 0 0 0 4px #ff4081;
   }
 }
 
@@ -151,6 +151,6 @@
 button:focus-visible,
 select:focus-visible,
 textarea:focus-visible {
-  outline: 2px solid #00e6d8;
+  outline: 2px solid #ffc300;
   outline-offset: 2px;
 }
