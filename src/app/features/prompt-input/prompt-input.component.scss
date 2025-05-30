@@ -7,26 +7,25 @@
   background: none;
 }
 
-// Main prompt panel with Ableton-inspired glassmorphism (amber & charcoal harmony)
+// Main prompt panel with Ableton-inspired glassmorphism (simple, dark, modern)
 .prompt-container {
-  background: rgba(48, 40, 32, 0.88); // warm charcoal glass
-  backdrop-filter: blur(14px) saturate(130%);
-  -webkit-backdrop-filter: blur(14px) saturate(130%);
-  border: 1.5px solid rgba(255, 195, 0, 0.13); // subtle amber border
-  box-shadow: 0 4px 24px 0 rgba(255, 195, 0, 0.1),
-    0 2px 16px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 16px;
+  background: rgba(35, 35, 35, 0.92); // deep neutral glass
+  backdrop-filter: blur(12px) saturate(120%);
+  -webkit-backdrop-filter: blur(12px) saturate(120%);
+  border: 1.5px solid rgba(255, 195, 0, 0.1); // subtle amber border
+  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
+  border-radius: 14px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2.2rem 2rem 1.5rem 2rem;
+  padding: 2rem 1.5rem 1.2rem 1.5rem;
   max-width: 650px;
   width: 100%;
   margin: 0 auto;
   transition: box-shadow 0.3s, background 0.3s;
 
   @media (max-width: 700px) {
-    padding: 1.2rem 0.5rem;
+    padding: 1rem 0.5rem;
     border-radius: 10px;
     max-width: 98vw;
   }
@@ -41,9 +40,9 @@
   width: 100%;
   max-width: 600px;
   height: 110px;
-  background: #2d2623; // deep brownish charcoal
+  background: #232323;
   color: #ffe082; // soft amber
-  border: 1.5px solid #ffc300;
+  border: 1.5px solid #353535;
   border-radius: 8px;
   padding: 12px;
   font-size: 1.08rem;
@@ -70,7 +69,7 @@
 // Controls row
 .controls {
   display: flex;
-  gap: 18px;
+  gap: 16px;
   margin: 10px 0 18px 0;
   flex-wrap: wrap;
   width: 100%;
@@ -89,9 +88,9 @@
 // Select elements
 .bpm-select,
 .key-select {
-  background: #2d2623;
+  background: #232323;
   color: #ffe082;
-  border: 1.5px solid #ffc300;
+  border: 1.5px solid #353535;
   padding: 8px 14px;
   border-radius: 5px;
   font-size: 1rem;
@@ -99,9 +98,9 @@
   transition: border-color 0.2s, box-shadow 0.2s;
 
   &:focus-visible {
-    border-color: #ff4081;
+    border-color: #00e6d8;
     outline: none;
-    box-shadow: 0 0 0 2px #ff4081;
+    box-shadow: 0 0 0 2px #00e6d8;
   }
 }
 
@@ -109,21 +108,21 @@
 .speech-btn,
 .generate-btn,
 .download-btn {
-  background: linear-gradient(90deg, #ffc300 60%, #ff4081 100%);
+  background: linear-gradient(90deg, #ffc300 60%, #00e6d8 100%);
   color: #232323;
   border: none;
-  padding: 10px 26px;
+  padding: 10px 24px;
   border-radius: 6px;
   cursor: pointer;
   font-size: 1.08rem;
   font-weight: 600;
   letter-spacing: 0.01em;
-  box-shadow: 0 2px 12px 0 rgba(255, 195, 0, 0.13);
+  box-shadow: 0 2px 12px 0 rgba(255, 195, 0, 0.1);
   transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
 
   &:hover,
   &:focus-visible {
-    background: linear-gradient(90deg, #ff4081 60%, #ffc300 100%);
+    background: linear-gradient(90deg, #00e6d8 60%, #ffc300 100%);
     box-shadow: 0 0 0 3px #ffc300;
     color: #232323;
   }
@@ -135,7 +134,7 @@
 
   &:active {
     transform: scale(0.97);
-    box-shadow: 0 0 0 4px #ff4081;
+    box-shadow: 0 0 0 4px #00e6d8;
   }
 }
 
