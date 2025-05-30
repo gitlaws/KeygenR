@@ -1,113 +1,12 @@
-// Center the prompt container in the viewport
-.prompt-center-viewport {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: none;
-}
-
-// Main prompt panel with Ableton-inspired glassmorphism (simple, dark, modern)
-.prompt-container {
-  background: rgba(35, 35, 35, 0.92); // deep neutral glass
-  backdrop-filter: blur(12px) saturate(120%);
-  -webkit-backdrop-filter: blur(12px) saturate(120%);
-  border: 1.5px solid rgba(255, 195, 0, 0.1); // subtle amber border
-  box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.18);
-  border-radius: 14px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 2rem 1.5rem 1.2rem 1.5rem;
-  max-width: 650px;
-  width: 100%;
-  margin: 0 auto;
-  transition: box-shadow 0.3s, background 0.3s;
-
-  @media (max-width: 700px) {
-    padding: 1rem 0.5rem;
-    border-radius: 10px;
-    max-width: 98vw;
-  }
-  @media (max-width: 500px) {
-    padding: 0.5rem 0.1rem;
-    border-radius: 7px;
-  }
-}
-
-// Prompt textarea
-.prompt-input {
-  width: 100%;
-  max-width: 600px;
-  height: 110px;
-  background: #232323;
-  color: #ffe082; // soft amber
-  border: 1.5px solid #353535;
-  border-radius: 8px;
-  padding: 12px;
-  font-size: 1.08rem;
-  font-family: "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
-  margin-bottom: 1.2rem;
-  transition: border-color 0.2s, box-shadow 0.2s;
-
-  &:focus-visible {
-    border-color: #ffc300;
-    outline: none;
-    box-shadow: 0 0 0 2px #ffc300;
-  }
-
-  @media (max-width: 700px) {
-    font-size: 15px;
-    height: 90px;
-  }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    height: 70px;
-  }
-}
-
-// Controls row
 .controls {
   display: flex;
   gap: 16px;
   margin: 10px 0 18px 0;
-  flex-wrap: wrap;
-  width: 100%;
   justify-content: center;
-
-  @media (max-width: 700px) {
-    gap: 10px;
-    margin: 10px 0;
-  }
-  @media (max-width: 500px) {
-    gap: 6px;
-    margin: 6px 0;
-  }
+  align-items: center;
 }
 
-// Select elements
-.bpm-select,
-.key-select {
-  background: #232323;
-  color: #ffe082;
-  border: 1.5px solid #353535;
-  padding: 8px 14px;
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
-  transition: border-color 0.2s, box-shadow 0.2s;
-
-  &:focus-visible {
-    border-color: #00e6d8;
-    outline: none;
-    box-shadow: 0 0 0 2px #00e6d8;
-  }
-}
-
-// Accent buttons
-.speech-btn,
-.generate-btn,
-.download-btn {
+.generate-btn {
   background: linear-gradient(90deg, #ffc300 60%, #00e6d8 100%);
   color: #232323;
   border: none;
@@ -120,13 +19,6 @@
   box-shadow: 0 2px 12px 0 rgba(255, 195, 0, 0.1);
   transition: background 0.3s, transform 0.1s, box-shadow 0.3s;
 
-  &:hover,
-  &:focus-visible {
-    background: linear-gradient(90deg, #00e6d8 60%, #ffc300 100%);
-    box-shadow: 0 0 0 3px #ffc300;
-    color: #232323;
-  }
-
   &:focus-visible {
     outline: 2px solid #ffc300;
     outline-offset: 2px;
@@ -136,20 +28,42 @@
     transform: scale(0.97);
     box-shadow: 0 0 0 4px #00e6d8;
   }
+
+  &:disabled {
+    background: #444;
+    color: #bbb;
+    cursor: not-allowed;
+    box-shadow: none;
+  }
 }
 
-.speech-btn:disabled,
-.generate-btn:disabled {
-  background: #444;
-  color: #bbb;
-  cursor: not-allowed;
-  box-shadow: none;
-}
+.mic-btn {
+  background: #232323;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.7rem;
+  margin-left: 10px;
+  cursor: pointer;
+  transition: none;
 
-// Accessibility: Focus outlines for all interactive elements
-button:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
-  outline: 2px solid #ffc300;
-  outline-offset: 2px;
+  .fa-microphone {
+    color: #fff;
+    transition: none;
+  }
+
+  &:focus-visible {
+    outline: 2px solid #fff;
+    outline-offset: 2px;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 }
