@@ -1,6 +1,9 @@
 import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 import { FormsModule } from "@angular/forms";
+import { MidiService } from "../../services/midi.service";
+
+import { AiService } from "../../services/ai.service";
 
 @Component({
   selector: "app-prompt-input",
@@ -10,6 +13,7 @@ import { FormsModule } from "@angular/forms";
   styleUrls: ["./prompt-input.component.scss"],
 })
 export class PromptInputComponent {
+  constructor(private ai: AiService, private midi: MidiService) {}
   userPrompt: string = "";
   bpm: number = 90;
   key: string = "C";
@@ -32,13 +36,11 @@ export class PromptInputComponent {
   isListening: boolean = false;
   isGenerating: boolean = false;
 
-  generateMidi() {
-    // TODO: Integrate with your MidiService
+  async generateMidi() {
     this.isGenerating = true;
-    setTimeout(() => {
-      this.midiUri = "data:audio/midi;base64,...."; // Placeholder
-      this.isGenerating = false;
-    }, 2000);
+    const structured = await this.ai.parsePrompt(this.userPrompt);
+    this.midiUri = this.midi.generateMidi(structured);
+    this.isGenerating = false;
   }
 
   toggleSpeech() {
@@ -57,5 +59,12 @@ export class PromptInputComponent {
     };
     this.isListening = true;
     recognition.start();
+  }
+
+  downloadMidi() {
+    const a = document.createElement("a");
+    a.href = this.midiUri;
+    a.download = "keygenr.mid";
+    a.click();
   }
 }

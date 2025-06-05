@@ -25,5 +25,9 @@
         <i class="fas fa-microphone" aria-hidden="true"></i>
       </button>
     </div>
+    <!-- Add this inside your prompt-container, after the controls -->
+    <button *ngIf="midiUri" class="download-btn" (click)="downloadMidi()">
+      Download MIDI
+    </button>
   </div>
 </div>
