@@ -49,6 +49,7 @@
   font-family: "Inter", "Roboto", "Segoe UI", Arial, sans-serif;
   margin-bottom: 1.2rem;
   transition: border-color 0.2s, box-shadow 0.2s;
+  resize: none;
 
   &:focus-visible {
     border-color: #ffc300;
