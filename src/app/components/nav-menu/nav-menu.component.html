@@ -1,0 +1,16 @@
+<nav>
+  <button
+    class="toolbar-menu"
+    aria-label="Open menu"
+    [attr.aria-expanded]="menuOpen"
+    aria-controls="main-menu"
+    (click)="toggleMenu()"
+  >
+    &#9776;
+  </button>
+  <ul class="toolbar-links" [class.open]="menuOpen" id="main-menu" role="menu">
+    <li role="none"><a role="menuitem" href="#">Home</a></li>
+    <li role="none"><a role="menuitem" href="#">Features</a></li>
+    <li role="none"><a role="menuitem" href="#">Contact</a></li>
+  </ul>
+</nav>

@@ -1,12 +1,11 @@
-import { Component } from '@angular/core';
+import { Component } from "@angular/core";
+import { NavMenuComponent } from "../nav-menu/nav-menu.component";
 
 @Component({
-  selector: 'app-toolbar',
+  selector: "app-toolbar",
   standalone: true,
-  imports: [],
-  templateUrl: './toolbar.component.html',
-  styleUrl: './toolbar.component.scss'
+  imports: [NavMenuComponent],
+  templateUrl: "./toolbar.component.html",
+  styleUrl: "./toolbar.component.scss",
 })
-export class ToolbarComponent {
-
-}
+export class ToolbarComponent {}
